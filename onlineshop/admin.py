@@ -16,5 +16,5 @@ class SalesNetworkAdmin(admin.ModelAdmin):
     list_filter = ('city',)
     actions = ('clear_debt',)
 
-    def clear_debt(self, queryset):
+    def clear_debt(self, request, queryset):
         queryset.update(debt=0)
